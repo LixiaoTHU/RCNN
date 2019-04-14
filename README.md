@@ -13,7 +13,7 @@ Here is the architecture of the model.
 
 Refer to the paper below for more details.
 
-####Note
+#### Note
 
 the implementation is a little bit different from [the original paper](http://xlhu.cn/papers/Liang15-cvpr.pdf).
 
@@ -23,7 +23,7 @@ the implementation is a little bit different from [the original paper](http://xl
 
 • For simplification, using Tencorp (there exsits api in pytorch) for test here instead of the original nine crops.
 
-#### How to train
+### How to train
 
 usage: train.py [-h] [-n K] [-b BATCH_SIZE] [-e EPOCH] [-s SAVE_DIR]  [-l TRAINING_LOG]
 
@@ -37,7 +37,7 @@ optional arguments:
   -s SAVE_DIR      the model parameters to be saved
   -l TRAINING_LOG  the logs to be saved
 
-#### Results on cifar-10
+### Results on cifar-10
 
 With Data Augmentation
 
@@ -47,7 +47,10 @@ With Data Augmentation
 | RCNN-128 |      1.19 M       |       7.42        |
 | RCNN-160 |      1.86 M       |       7.31        |
 
-#### Train procedure for RCNN-96
+There is no significant difference between the test error here and that in [4.2.2](http://xlhu.cn/papers/Liang15-cvpr.pdf).
+Maybe the hyper-parameter can be adjusted to get a better model.
+
+### Train procedure for RCNN-96
 
 ![log_96](./log/log_96.png)
 
