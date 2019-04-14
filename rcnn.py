@@ -50,25 +50,9 @@ class RCNN(nn.Module):
         return x
 
 if __name__ == "__main__":
-    from torchvision.datasets import CIFAR10
-    import torchvision.transforms as transforms
     import numpy as np
 
-    transform = transforms.Compose([
-        transforms.TenCrop(24),
-        transforms.Lambda(lambda crops: torch.stack([transforms.ToTensor()(crop) for crop in crops])),
-        transforms.Lambda(lambda crops: torch.stack([transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])(crop) for crop in crops]))])
-
-    trainset = CIFAR10("~/Datasets/", transform = transform, download=True)
-    testloader = torch.utils.data.DataLoader(trainset, batch_size = 32, shuffle = False, num_workers = 32)
     net = RCNN(3, 10, K = 96)
-    for (images, labels) in testloader:
-        bs, ncrops, c, h, w = images.size()
-        result = net(images.view(-1, c, h, w))
-        result_avg = result.view(bs, ncrops, -1).mean(1)
-        print(result_avg.shape)
-        print(labels.shape)
-        break
 
     size = 1
     for param in net.parameters():
