@@ -43,12 +43,12 @@ With Data Augmentation
 
 | Network  | No. of Parameters | Testing Error (%) |
 | :------: | :---------------: | :---------------: |
-| RCNN-96  |      0.67 M       |       7.65        |
-| RCNN-128 |      1.19 M       |       7.42        |
-| RCNN-160 |      1.86 M       |       7.31        |
+| RCNN-96  |      0.67 M       |       7.29        |
+| RCNN-128 |      1.19 M       |       6.76        |
+| RCNN-160 |      1.86 M       |       6.66        |
 
-There is no significant difference between the test error here and that in [4.2.2](http://xlhu.cn/papers/Liang15-cvpr.pdf).
-Maybe the hyper-parameter can be adjusted to get a better model.
+The result improves slightly compared with that in [4.2.2](http://xlhu.cn/papers/Liang15-cvpr.pdf).Maybe the hyper-parameter 
+can be adjusted to get a better model.
 
 ### Train procedure for RCNN-96
 

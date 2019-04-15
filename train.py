@@ -60,7 +60,7 @@ def load_data(datadir, batch_size, GPU_COUNT):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Train RCNN')
     parser.add_argument('-n', dest='K', type=int, default = 96, help='the parameter K for RCNN')
-    parser.add_argument('-b', dest='batch_size', type=int, default=128, help='the batch size in just one gpu, * GPU_COUNT')
+    parser.add_argument('-b', dest='batch_size', type=int, default=64, help='the batch size in just one gpu, * GPU_COUNT')
     parser.add_argument('-e', dest='epoch', type=int, default=200, help='the training epoch')
     parser.add_argument('-s', dest='save_dir', type=str, default="log.csv", help='the model parameters to be saved')
     parser.add_argument('-l', dest='training_log', type=str, default="weights.pkl", help='the logs to be saved')
