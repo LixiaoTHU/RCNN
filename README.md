@@ -1,5 +1,5 @@
 # RCNN IN Pytorch
-Implementation of <http://xlhu.cn/papers/Liang15-cvpr.pdf>. 
+Implementation of Recurrent Convolutional Neural Network for Object Recognition<http://xlhu.cn/papers/Liang15-cvpr.pdf>. 
 
 ### Requirements
 
